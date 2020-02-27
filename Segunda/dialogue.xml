@@ -1,0 +1,174 @@
+<!--- <aiml> inicia o bloco AIML.
+
+<category> indica uma categoria ou unidade de conhecimento.
+
+<pattern> Indica o padrão da mensagem que será digitada pelo usuário.
+
+<templat> indica a resposta para o que foi digitado
+
+<random> proporciona respostas aleatórias
+
+<li> marca bloco de respostas aleatórias é usado dentro do bloco <random>
+
+<that> registra a ultima sentença, gerando uma seqüência no dialogo.
+
+<srai> Redireciona para outra questão ou categoria.
+
+coloque pattern tudo maisculo
+-->
+
+<aiml>
+
+    <category>
+        <pattern>MENU</pattern>
+        <template>
+            Digite "pedir remédio" para iniciar um pedido de remédio específico ou digite "sair" para encerrar as atividades.
+        </template>
+    </category>
+
+    <category>
+        <pattern>INICIO</pattern>
+        <template>
+            <random>
+                <li>Olá, seja bem vindo ao nosso sistema, para ser informado sobre nossos serviços, digite menu digite "menu"</li>
+                <li>Oi, seu pedido será inicializado quando for digitado "pedido" ou digite "menu" para se obter informações extras</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SAIR</pattern>
+        <template>
+            Obrigado pela preferencia, esperamos você numa próxima vez!
+        </template>
+    </category>
+
+    <category>
+        <pattern>PEDIDO</pattern>
+        <template>
+            Escolha entre os remédios (digite "todos os remédios" para saber os disponíveis). Digitando "Remédio de" seguido da doença que está querendo combater.
+             Exemplo "Remédio de Dor de Cabeça".
+        </template>
+    </category>
+
+    <category>
+        <pattern>REMÉDIO DE *</pattern>
+        <template> Você está pedindo um remédio de <star index = "1"/>, digite ok para concluir o pedido ou apenas o nome de alguma doença para adicionar outros </template>
+    </category>
+
+    <category>
+        <pattern>DIARREIA</pattern>
+        <template>
+            Adicionado remédio para combater a diarreia
+        </template>
+    </category>
+
+    <category>
+        <pattern>PRISÃO DE VENTRE</pattern>
+        <template>
+            Adicionado laxante
+        </template>
+    </category>
+
+    <category>
+        <pattern>PROMOÇÃO</pattern>
+        <template>
+            Infelizmente, não fazemos mais promoções
+        </template>
+    </category>
+
+    <category>
+        <pattern>VALOR</pattern>
+        <template>
+             <random>
+                <li>Os nossos remédios estão custando 49.99</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NOME</pattern>
+        <template>
+            Farmácia do Guilherme
+        </template>
+    </category>
+
+    <category>
+        <pattern>LUGAR</pattern>
+        <template>
+            Jatiúca
+        </template>
+    </category>
+
+    <category>
+        <pattern>ENTREGA</pattern>
+        <template>
+            Entrega de 15:00 as 21:00 de segunda a domingo
+        </template>
+    </category>
+
+    <category>
+        <pattern>DOR DE CABEÇA</pattern>
+        <template>
+            Adicionado remédio de dor de cabeça
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>OK</pattern>
+        <template>
+            O total deu: 49.99, qual a forma de pagamento?
+        </template>
+    </category>
+
+    <category>
+        <pattern>DEBITO</pattern>
+        <template>
+            O pagamento foi fechado com cartão de débito, digite sair para fechar o chat
+        </template>
+    </category>
+
+    <category>
+        <pattern>CREDITO</pattern>
+        <template>
+            O pagamento foi fechado com cartão de crédito, digite sair para fechar o chat
+        </template>
+    </category>
+
+    <category>
+        <pattern>DINHEIRO</pattern>
+        <template>
+            O pagamento foi fechado em dinheiro, digite sair para fechar o chat
+        </template>
+    </category>
+
+    <category>
+        <pattern>HORARIO</pattern>
+        <template>
+            Entrega de 15:00 as 21:00 de segunda a domingo
+        </template>
+    </category>
+
+    <category>
+        <pattern>TODOS OS REMEDIOS</pattern>
+        <template>
+            Remédio de dor de cabeça, remédio de prisão de ventre e remédio de diarreia
+        </template>
+    </category>
+
+    <category>
+        <pattern>PAGAMENTO</pattern>
+        <template>
+            Pode ser realizado com os cartões de crédito, débito ou dinheiro, todos a vista
+        </template>
+    </category>
+
+    <category>
+        <pattern>FRETE</pattern>
+        <template>
+            Frete Grátis para toda Maceió
+        </template>
+    </category>
+
+</aiml>

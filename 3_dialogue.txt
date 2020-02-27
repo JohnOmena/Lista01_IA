@@ -1,0 +1,4 @@
+user > ola quero comprar pizza
+bot  > pizza de que sabor?
+user > pizza de calabresa
+bot  > ok obrigado

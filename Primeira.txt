@@ -1,0 +1,24 @@
+1 - Eliza é um chatbot que foi criado na década de 60 com o intuito de auxiliar pacientes que estavam precisando
+do atendimento de um terapeuta. Alguns pontos interessantes que possuem destaque no chatbot Eliza, são o fato de
+que ele consegue gerar conversas de alto nível com seus usuários, mesmo com todas as limitações que haviam na época.
+Ela consegue, na maioria das vezes, destacar o sujeito com quem se fala e também de quem se está falando. No entanto,
+existem algumas falhas em sua implementação, como por exemplo demonstrado no diálogo abaixo:
+
+ELIZA: Is something troubling you ?
+YOU:   I'm sad
+ELIZA: Do you think coming here will help you not to be sad ?
+YOU:   Yes
+ELIZA: I see.
+YOU:   I have a problem that the mother of my dog died
+ELIZA: Why do you say your dog died ?
+
+Na verdade, a falha de implementação da Eliza não permite que ela identifique o sujeito no qual se está sendo falado.
+Eliza tenta destacar o sujeito no qual se fala no momento em que recebe a frase como entrada, porém, numa frase como 
+"I have a problem that the mother of my dog died" ela não consegue entender que quem morreu foi a mãe do meu cachorro,
+identificando, assim, que o meu cachorro morreu.
+
+- Alguns features relacionados a Eliza:
+    1 - Compreensão da linguagem natural (que vai bem além do simples reconhecimento de palavras);
+    2 - Uso educacional ("Teaching-machines")
+    3 - Capacidade de aprender durante a conversa
+    4 - Análise de fragmentos de textos nas conversas
